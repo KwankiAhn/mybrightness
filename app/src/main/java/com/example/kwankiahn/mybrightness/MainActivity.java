@@ -1,5 +1,6 @@
 package com.example.kwankiahn.mybrightness;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,18 +13,24 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context = this;
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         final BrightnessDriverNotification notification = new BrightnessDriverNotification();
-        ToggleButton toggle = (ToggleButton)findViewById(R.id.toggleButton);
+        final ToggleButton toggle = (ToggleButton)findViewById(R.id.toggleButton);
         toggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                notification.toggle();
+                if (toggle.isChecked()) {
+                    notification.start(context);
+                } else {
+                    notification.stop(context);
+                }
             }
         });
     }
