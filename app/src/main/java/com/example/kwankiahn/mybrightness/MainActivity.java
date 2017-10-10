@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        final BrightnessDriverNotification notification = new BrightnessDriverNotification();
+        final BrightnessDriverNotification notification = new BrightnessDriverNotification(context);
         final ToggleButton toggle = (ToggleButton)findViewById(R.id.toggleButton);
         toggle.setOnClickListener(new View.OnClickListener() {
             @Override
