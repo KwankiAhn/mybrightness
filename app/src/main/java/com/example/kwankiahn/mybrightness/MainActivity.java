@@ -1,6 +1,7 @@
 package com.example.kwankiahn.mybrightness;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,7 @@ import android.widget.ToggleButton;
 public class MainActivity extends AppCompatActivity {
 
     private Context context;
+    private ButtonListener listener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        //startService(new Intent(this, BrightnessDriverService.class));
+        listener = new ButtonListener();
     }
 
     @Override
