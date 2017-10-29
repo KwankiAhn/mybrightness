@@ -12,15 +12,15 @@ import android.util.Log;
 public class ButtonListener extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.d("MYBRIGHTNESS", "onReceive");
+        Log.d(MainActivity.TAG, "onReceive");
         if (intent.getStringExtra("LEVEL").equals("25")) {
-            Log.d("MYBRIGHTNESS", "LEVEL 25");
+            Log.d(MainActivity.TAG, "LEVEL 25");
         } else if (intent.getStringExtra("LEVEL").equals("50")) {
-            Log.d("MYBRIGHTNESS", "LEVEL 50");
+            Log.d(MainActivity.TAG, "LEVEL 50");
         } else if (intent.getStringExtra("LEVEL").equals("100")) {
-            Log.d("MYBRIGHTNESS", "LEVEL 100");
+            Log.d(MainActivity.TAG, "LEVEL 100");
         } else if (intent.getStringExtra("LEVEL").equals("AUTO")) {
-            Log.d("MYBRIGHTNESS", "LEVEL AUTO");
+            Log.d(MainActivity.TAG, "LEVEL AUTO");
         }
     }
 }

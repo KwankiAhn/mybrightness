@@ -7,17 +7,19 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static String TAG = "MYBRIGHTNESS";
     private Context context;
     private ButtonListener listener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate() Start");
         super.onCreate(savedInstanceState);
         context = this;
         setContentView(R.layout.activity_main);
@@ -32,25 +34,23 @@ public class MainActivity extends AppCompatActivity {
                     notification.start(context);
                 } else {
                     notification.stop(context);
+                    //getApplicationContext().unregisterReceiver(listener);
                 }
             }
         });
-        //startService(new Intent(this, BrightnessDriverService.class));
-        listener = new ButtonListener();
+        //listener = new ButtonListener();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        Log.d(TAG, "onCreateOptionsMenu() Start");
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        Log.d(TAG, "onOptionsItemSelected() Start");
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -59,5 +59,25 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onStart() {
+        Log.d(TAG, "onStart() Start");
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.d(TAG, "onStop() Start");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d(TAG, "onDestroy() Start");
+        /* I would not unregister with exiting app (even on destroy),
+        * finish operation by user explicitly (ie. exit button) would delete all */
+        super.onDestroy();
     }
 }

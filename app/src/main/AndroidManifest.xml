@@ -19,10 +19,6 @@
             </intent-filter>
         </activity>
         <receiver android:name=".ButtonListener"/>
-        <service
-            android:name=".BrightnessDriverService"
-            android:enabled="true"
-            android:exported="true"></service>
     </application>
 
 </manifest>

@@ -25,7 +25,6 @@ public class BrightnessDriverNotification{
         LEVEL_100,
     }
 
-    private static String TAG = "MYBRIGHTNESS";
     final int mNotificationId = 9766;
     private NotificationManager mNotifyMgr;
     private RemoteViews contentView;
@@ -50,16 +49,17 @@ public class BrightnessDriverNotification{
         level100.putExtra("LEVEL", "100");
         Intent levelAuto = new Intent(context, ButtonListener.class);
         levelAuto.putExtra("LEVEL", "AUTO");
-        PendingIntent level25Intent = PendingIntent.getBroadcast(context, 0, level25, 0);
-        PendingIntent level50Intent = PendingIntent.getBroadcast(context, 0, level50, 0);
-        PendingIntent level100Intent = PendingIntent.getBroadcast(context, 0, level100, 0);
-        PendingIntent levelAutoIntent = PendingIntent.getBroadcast(context, 0, levelAuto, 0);
+        PendingIntent level25Intent = PendingIntent.getBroadcast(context, R.id.image_25, level25, 0);
+        PendingIntent level50Intent = PendingIntent.getBroadcast(context, R.id.image_50, level50, 0);
+        PendingIntent level100Intent = PendingIntent.getBroadcast(context, R.id.image_100, level100, 0);
+        PendingIntent levelAutoIntent = PendingIntent.getBroadcast(context, R.id.image_auto, levelAuto, 0);
         contentView.setOnClickPendingIntent(R.id.image_25, level25Intent);
         contentView.setOnClickPendingIntent(R.id.image_50, level50Intent);
         contentView.setOnClickPendingIntent(R.id.image_100, level100Intent);
         contentView.setOnClickPendingIntent(R.id.image_auto, levelAutoIntent);
         mNotifyMgr.notify(mNotificationId, mBuilder.build());
     }
+
     private void createContentView(Context context) {
         contentView = new RemoteViews(context.getPackageName(), R.layout.notification);
     }
@@ -72,9 +72,7 @@ public class BrightnessDriverNotification{
         contentView.setImageViewResource(R.id.image_100, R.mipmap.ic_launcher);
         contentView.setImageViewResource(R.id.image_auto, R.drawable.unchecked);
     }
-    private void initClickEvent(Context context) {
 
-    }
     private void setLevelIcons(Level level) {
         if (level == Level.LEVEL_25) {
             contentView.setImageViewResource(R.id.image_25, R.drawable.red_dot);
@@ -87,28 +85,4 @@ public class BrightnessDriverNotification{
             contentView.setImageViewResource(R.id.image_100, R.drawable.red_dot);
         }
     }
-    private void setBrighenessLevel(Level level) {
-        if (level == Level.LEVEL_25) {
-
-        } else if (level == Level.LEVEL_50) {
-
-        } else if (level == Level.LEVEL_100) {
-
-        }
-    }
-
-//    public static class ButtonListener extends BroadcastReceiver {
-//        @Override
-//        public void onReceive(Context context, Intent intent) {
-//            if (intent.getStringExtra("LEVEL").equals("25")) {
-//                Log.d("MYBRIGHTNESS", "LEVEL 25");
-//            } else if (intent.getStringExtra("LEVEL").equals("50")) {
-//                Log.d("MYBRIGHTNESS", "LEVEL 50");
-//            } else if (intent.getStringExtra("LEVEL").equals("100")) {
-//                Log.d("MYBRIGHTNESS", "LEVEL 100");
-//            } else if (intent.getStringExtra("LEVEL").equals("AUTO")) {
-//                Log.d("MYBRIGHTNESS", "LEVEL AUTO");
-//            }
-//        }
-//    }
 }
