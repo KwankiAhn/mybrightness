@@ -73,7 +73,7 @@ public class BrightnessDriverNotification{
         contentView.setImageViewResource(R.id.image_auto, R.drawable.unchecked);
     }
 
-    private void setLevelIcons(Level level) {
+    public void setLevelIcons(Level level) {
         if (level == Level.LEVEL_25) {
             contentView.setImageViewResource(R.id.image_25, R.drawable.red_dot);
         } else if (level == Level.LEVEL_50) {
