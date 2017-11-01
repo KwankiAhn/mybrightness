@@ -26,21 +26,23 @@ public class BrightnessDriverNotification{
     }
 
     final int mNotificationId = 9766;
-    private NotificationManager mNotifyMgr;
     private RemoteViews contentView;
+    private NotificationManager mNotifyMgr;
+    private NotificationCompat.Builder mBuilder;
     public BrightnessDriverNotification(Context context) {
         mNotifyMgr = (NotificationManager)context.getSystemService(NOTIFICATION_SERVICE);
     }
     public void start(Context context) {
         createContentView(context);
-        initAllIcons();
+        setButtonIconsAsDefault();
         createNotification(context);
+        showNotification();
     }
     public void stop(Context context) {
         cancelNotification();
     }
     private void createNotification(Context context) {
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context).setSmallIcon(R.drawable.smile).setContent(contentView).setOngoing(true);
+        mBuilder = new NotificationCompat.Builder(context).setSmallIcon(R.drawable.smile).setContent(contentView).setOngoing(true);
         Intent level25 = new Intent(context, ButtonListener.class);
         level25.putExtra("LEVEL", "25");
         Intent level50 = new Intent(context, ButtonListener.class);
@@ -57,6 +59,9 @@ public class BrightnessDriverNotification{
         contentView.setOnClickPendingIntent(R.id.image_50, level50Intent);
         contentView.setOnClickPendingIntent(R.id.image_100, level100Intent);
         contentView.setOnClickPendingIntent(R.id.image_auto, levelAutoIntent);
+
+    }
+    private void showNotification() {
         mNotifyMgr.notify(mNotificationId, mBuilder.build());
     }
 
@@ -66,23 +71,37 @@ public class BrightnessDriverNotification{
     private void cancelNotification() {
         mNotifyMgr.cancel((mNotificationId));
     }
-    private void initAllIcons() {
+    private void setButtonIconsAsDefault() {
         contentView.setImageViewResource(R.id.image_25, R.mipmap.ic_launcher);
         contentView.setImageViewResource(R.id.image_50, R.mipmap.ic_launcher);
         contentView.setImageViewResource(R.id.image_100, R.mipmap.ic_launcher);
         contentView.setImageViewResource(R.id.image_auto, R.drawable.unchecked);
     }
 
-    public void setLevelIcons(Level level) {
+    public void updateButtonIconsAccordingToLevel(Context context, Level level) {
+        createContentView(context);
+        setButtonIconsAsDefault();
         if (level == Level.LEVEL_25) {
-            contentView.setImageViewResource(R.id.image_25, R.drawable.red_dot);
+            contentView.setImageViewResource(R.id.image_25, R.mipmap.ic_launcher_round);
         } else if (level == Level.LEVEL_50) {
-            contentView.setImageViewResource(R.id.image_25, R.drawable.red_dot);
-            contentView.setImageViewResource(R.id.image_50, R.drawable.red_dot);
+            contentView.setImageViewResource(R.id.image_25, R.mipmap.ic_launcher_round);
+            contentView.setImageViewResource(R.id.image_50, R.mipmap.ic_launcher_round);
         } else if (level == Level.LEVEL_100) {
-            contentView.setImageViewResource(R.id.image_25, R.drawable.red_dot);
-            contentView.setImageViewResource(R.id.image_50, R.drawable.red_dot);
-            contentView.setImageViewResource(R.id.image_100, R.drawable.red_dot);
+            contentView.setImageViewResource(R.id.image_25, R.mipmap.ic_launcher_round);
+            contentView.setImageViewResource(R.id.image_50, R.mipmap.ic_launcher_round);
+            contentView.setImageViewResource(R.id.image_100, R.mipmap.ic_launcher_round);
         }
+        createNotification(context);
+        showNotification();
+    }
+    public void updateCheckIconAccordingToStatus(Context context, boolean isAuto) {
+        createContentView(context);
+        setButtonIconsAsDefault();
+        if (isAuto)
+            contentView.setImageViewResource(R.id.image_auto, R.drawable.checked);
+        else
+            contentView.setImageViewResource(R.id.image_auto, R.drawable.unchecked);
+        createNotification(context);
+        showNotification();
     }
 }

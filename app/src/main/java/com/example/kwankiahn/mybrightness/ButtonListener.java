@@ -18,23 +18,28 @@ public class ButtonListener extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        BrightnessDriverNotification notification = new BrightnessDriverNotification(context);
+        BrightnessDriverNotification driverNotification = new BrightnessDriverNotification(context);
         Log.d(MainActivity.TAG, "onReceive");
         if (intent.getStringExtra("LEVEL").equals("25")) {
             Log.d(MainActivity.TAG, "LEVEL 25");
             controller.setBrightness(context, 255 * 0.25);
-            notification.setLevelIcons(BrightnessDriverNotification.Level.LEVEL_25);
+            driverNotification.updateButtonIconsAccordingToLevel(context, BrightnessDriverNotification.Level.LEVEL_25);
         } else if (intent.getStringExtra("LEVEL").equals("50")) {
             Log.d(MainActivity.TAG, "LEVEL 50");
             controller.setBrightness(context, 255 * 0.5);
-            notification.setLevelIcons(BrightnessDriverNotification.Level.LEVEL_50);
+            driverNotification.updateButtonIconsAccordingToLevel(context, BrightnessDriverNotification.Level.LEVEL_50);
         } else if (intent.getStringExtra("LEVEL").equals("100")) {
             Log.d(MainActivity.TAG, "LEVEL 100");
             controller.setBrightness(context, 255);
-            notification.setLevelIcons(BrightnessDriverNotification.Level.LEVEL_100);
+            driverNotification.updateButtonIconsAccordingToLevel(context, BrightnessDriverNotification.Level.LEVEL_100);
         } else if (intent.getStringExtra("LEVEL").equals("AUTO")) {
             Log.d(MainActivity.TAG, "LEVEL AUTO");
             controller.toggleAuto(context);
+            if (controller.isAutoMode(context)) {
+                driverNotification.updateCheckIconAccordingToStatus(context, true);
+            } else {
+                driverNotification.updateCheckIconAccordingToStatus(context, false);
+            }
         }
     }
 }
