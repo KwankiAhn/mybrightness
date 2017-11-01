@@ -94,9 +94,20 @@ public class BrightnessDriverNotification{
         createNotification(context);
         showNotification();
     }
-    public void updateCheckIconAccordingToStatus(Context context, boolean isAuto) {
+    public void updateCheckIconAccordingToStatus(Context context, boolean isAuto, Level level) {
+        // TODO: REFACTORY ME
         createContentView(context);
         setButtonIconsAsDefault();
+        if (level == Level.LEVEL_25) {
+            contentView.setImageViewResource(R.id.image_25, R.mipmap.ic_launcher_round);
+        } else if (level == Level.LEVEL_50) {
+            contentView.setImageViewResource(R.id.image_25, R.mipmap.ic_launcher_round);
+            contentView.setImageViewResource(R.id.image_50, R.mipmap.ic_launcher_round);
+        } else if (level == Level.LEVEL_100) {
+            contentView.setImageViewResource(R.id.image_25, R.mipmap.ic_launcher_round);
+            contentView.setImageViewResource(R.id.image_50, R.mipmap.ic_launcher_round);
+            contentView.setImageViewResource(R.id.image_100, R.mipmap.ic_launcher_round);
+        }
         if (isAuto)
             contentView.setImageViewResource(R.id.image_auto, R.drawable.checked);
         else

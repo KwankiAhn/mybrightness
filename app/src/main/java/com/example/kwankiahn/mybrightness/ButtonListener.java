@@ -10,6 +10,7 @@ import android.util.Log;
  */
 
 public class ButtonListener extends BroadcastReceiver {
+    private static BrightnessDriverNotification.Level storedLevel;
     BrightnessController controller;
     public ButtonListener() {
         super();
@@ -22,23 +23,26 @@ public class ButtonListener extends BroadcastReceiver {
         Log.d(MainActivity.TAG, "onReceive");
         if (intent.getStringExtra("LEVEL").equals("25")) {
             Log.d(MainActivity.TAG, "LEVEL 25");
-            controller.setBrightness(context, 255 * 0.25);
+            controller.setBrightness(context, 255 * 0.3);
             driverNotification.updateButtonIconsAccordingToLevel(context, BrightnessDriverNotification.Level.LEVEL_25);
+            storedLevel = BrightnessDriverNotification.Level.LEVEL_25;
         } else if (intent.getStringExtra("LEVEL").equals("50")) {
             Log.d(MainActivity.TAG, "LEVEL 50");
             controller.setBrightness(context, 255 * 0.5);
             driverNotification.updateButtonIconsAccordingToLevel(context, BrightnessDriverNotification.Level.LEVEL_50);
+            storedLevel = BrightnessDriverNotification.Level.LEVEL_50;
         } else if (intent.getStringExtra("LEVEL").equals("100")) {
             Log.d(MainActivity.TAG, "LEVEL 100");
             controller.setBrightness(context, 255);
             driverNotification.updateButtonIconsAccordingToLevel(context, BrightnessDriverNotification.Level.LEVEL_100);
+            storedLevel = BrightnessDriverNotification.Level.LEVEL_100;
         } else if (intent.getStringExtra("LEVEL").equals("AUTO")) {
             Log.d(MainActivity.TAG, "LEVEL AUTO");
             controller.toggleAuto(context);
             if (controller.isAutoMode(context)) {
-                driverNotification.updateCheckIconAccordingToStatus(context, true);
+                driverNotification.updateCheckIconAccordingToStatus(context, true, storedLevel);
             } else {
-                driverNotification.updateCheckIconAccordingToStatus(context, false);
+                driverNotification.updateCheckIconAccordingToStatus(context, false, storedLevel);
             }
         }
     }
