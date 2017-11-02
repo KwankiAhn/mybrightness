@@ -8,10 +8,18 @@ import android.provider.Settings;
  */
 
 public class BrightnessController {
-    public void setBrightness(Context context, double v) {
+    public void setBrightnessValue(Context context, double v) {
         android.provider.Settings.System.putInt(context.getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, (int)v);
     }
-
+    public int getBrightnessValue(Context context) {
+        int value = -1;
+        try {
+            value = Settings.System.getInt(context.getContentResolver(), Settings.System.SCREEN_BRIGHTNESS);
+        } catch (Settings.SettingNotFoundException e) {
+            e.printStackTrace();
+        }
+        return value;
+    }
     public void toggleAuto(Context context) {
         try {
             int isAuto = Settings.System.getInt(context.getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE);
