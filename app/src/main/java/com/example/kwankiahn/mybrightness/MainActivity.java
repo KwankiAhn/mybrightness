@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,20 +29,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setLogo(R.drawable.kkahn);
         final BrightnessDriverNotification notification = new BrightnessDriverNotification(context);
-        final ToggleButton toggle = (ToggleButton)findViewById(R.id.toggleButton);
-        toggle.setOnClickListener(new View.OnClickListener() {
+        final Button startButton = (Button)findViewById(R.id.startButton);
+        startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (toggle.isChecked()) {
-                    notification.start(context);
-                } else {
-                    notification.stop(context);
-                    //getApplicationContext().unregisterReceiver(listener);
-                }
+            notification.start(context);
             }
         });
-        //listener = new ButtonListener();
+        final Button endButton = (Button)findViewById(R.id.endButton);
+        endButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notification.stop(context);
+            }
+        });
+
     }
 
     @Override

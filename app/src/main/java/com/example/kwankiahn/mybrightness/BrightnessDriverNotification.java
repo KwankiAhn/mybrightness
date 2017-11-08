@@ -1,5 +1,6 @@
 package com.example.kwankiahn.mybrightness;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -42,7 +43,12 @@ public class BrightnessDriverNotification{
         cancelNotification();
     }
     private void createNotification(Context context) {
-        mBuilder = new NotificationCompat.Builder(context).setSmallIcon(R.drawable.smile).setContent(contentView).setOngoing(true);
+        mBuilder = new NotificationCompat.Builder(context).setSmallIcon(R.drawable.brightness)
+                .setContent(contentView).setOngoing(true);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            mBuilder.setCategory(Notification.CATEGORY_EVENT)
+                    .setPriority(Notification.PRIORITY_MAX);
+        }
         Intent level25 = new Intent(context, ButtonListener.class);
         level25.putExtra("LEVEL", "25");
         Intent level50 = new Intent(context, ButtonListener.class);
@@ -72,9 +78,9 @@ public class BrightnessDriverNotification{
         mNotifyMgr.cancel((mNotificationId));
     }
     private void setButtonIconsAsDefault() {
-        contentView.setImageViewResource(R.id.image_25, R.mipmap.ic_launcher);
-        contentView.setImageViewResource(R.id.image_50, R.mipmap.ic_launcher);
-        contentView.setImageViewResource(R.id.image_100, R.mipmap.ic_launcher);
+        contentView.setImageViewResource(R.id.image_25, R.mipmap.button_off);
+        contentView.setImageViewResource(R.id.image_50, R.mipmap.button_off);
+        contentView.setImageViewResource(R.id.image_100, R.mipmap.button_off);
         contentView.setImageViewResource(R.id.image_auto, R.drawable.unchecked);
     }
 
@@ -82,14 +88,14 @@ public class BrightnessDriverNotification{
         createContentView(context);
         setButtonIconsAsDefault();
         if (level == Level.LEVEL_25) {
-            contentView.setImageViewResource(R.id.image_25, R.mipmap.ic_launcher_round);
+            contentView.setImageViewResource(R.id.image_25, R.mipmap.button_on);
         } else if (level == Level.LEVEL_50) {
-            contentView.setImageViewResource(R.id.image_25, R.mipmap.ic_launcher_round);
-            contentView.setImageViewResource(R.id.image_50, R.mipmap.ic_launcher_round);
+            contentView.setImageViewResource(R.id.image_25, R.mipmap.button_on);
+            contentView.setImageViewResource(R.id.image_50, R.mipmap.button_on);
         } else if (level == Level.LEVEL_100) {
-            contentView.setImageViewResource(R.id.image_25, R.mipmap.ic_launcher_round);
-            contentView.setImageViewResource(R.id.image_50, R.mipmap.ic_launcher_round);
-            contentView.setImageViewResource(R.id.image_100, R.mipmap.ic_launcher_round);
+            contentView.setImageViewResource(R.id.image_25, R.mipmap.button_on);
+            contentView.setImageViewResource(R.id.image_50, R.mipmap.button_on);
+            contentView.setImageViewResource(R.id.image_100, R.mipmap.button_on);
         }
         if (isAuto)
             contentView.setImageViewResource(R.id.image_auto, R.drawable.checked);
