@@ -43,7 +43,7 @@ public class BrightnessDriverNotification{
         cancelNotification();
     }
     private void createNotification(Context context) {
-        mBuilder = new NotificationCompat.Builder(context).setSmallIcon(R.drawable.brightness)
+        mBuilder = new NotificationCompat.Builder(context).setSmallIcon(R.drawable.ic_stat_brightness_6)
                 .setContent(contentView).setOngoing(true);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             mBuilder.setCategory(Notification.CATEGORY_EVENT)
