@@ -29,13 +29,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setLogo(R.drawable.kkahn);
+        //toolbar.setLogo(R.drawable.kkahn);
         final BrightnessDriverNotification notification = new BrightnessDriverNotification(context);
         final Button startButton = (Button)findViewById(R.id.startButton);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            notification.start(context);
+                notification.start(context);
             }
         });
         final Button endButton = (Button)findViewById(R.id.endButton);

@@ -1,4 +1,4 @@
-#Thu Nov 02 22:43:09 KST 2017
-base.0=C\:\\src-github\\MyBrightness\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\26
+#Mon Jan 01 21:52:09 KST 2018
+base.0=C\:\\src-github\\MyBrightness\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
+path.0=classes.dex
 renamed.0=classes.dex
-file.0=C\:\\src-github\\MyBrightness\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\26\\classes.dex

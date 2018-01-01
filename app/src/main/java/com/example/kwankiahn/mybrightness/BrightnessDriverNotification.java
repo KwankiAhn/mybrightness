@@ -25,7 +25,11 @@ public class BrightnessDriverNotification{
         LEVEL_50,
         LEVEL_100,
     }
-
+    enum OffTime {
+        _30SEC,
+        _1MIN,
+        _10MIN
+    }
     final int mNotificationId = 9766;
     private RemoteViews contentView;
     private NotificationManager mNotifyMgr;
@@ -57,15 +61,18 @@ public class BrightnessDriverNotification{
         level100.putExtra("LEVEL", "100");
         Intent levelAuto = new Intent(context, ButtonListener.class);
         levelAuto.putExtra("LEVEL", "AUTO");
+        Intent powerOffTime = new Intent(context, ButtonListener.class);
+        powerOffTime.putExtra("POWEROFFTIME", "TOGGLE");
         PendingIntent level25Intent = PendingIntent.getBroadcast(context, R.id.image_25, level25, 0);
         PendingIntent level50Intent = PendingIntent.getBroadcast(context, R.id.image_50, level50, 0);
         PendingIntent level100Intent = PendingIntent.getBroadcast(context, R.id.image_100, level100, 0);
         PendingIntent levelAutoIntent = PendingIntent.getBroadcast(context, R.id.image_auto, levelAuto, 0);
+        PendingIntent powerOffTimeIntent = PendingIntent.getBroadcast(context, R.id.image_timeout, powerOffTime,0);
         contentView.setOnClickPendingIntent(R.id.image_25, level25Intent);
         contentView.setOnClickPendingIntent(R.id.image_50, level50Intent);
         contentView.setOnClickPendingIntent(R.id.image_100, level100Intent);
         contentView.setOnClickPendingIntent(R.id.image_auto, levelAutoIntent);
-
+        contentView.setOnClickPendingIntent(R.id.image_timeout, powerOffTimeIntent);
     }
     private void showNotification() {
         mNotifyMgr.notify(mNotificationId, mBuilder.build());
@@ -82,9 +89,10 @@ public class BrightnessDriverNotification{
         contentView.setImageViewResource(R.id.image_50, R.mipmap.button_off);
         contentView.setImageViewResource(R.id.image_100, R.mipmap.button_off);
         contentView.setImageViewResource(R.id.image_auto, R.drawable.unchecked);
+        contentView.setImageViewResource(R.id.image_timeout, R.mipmap.ic_launcher);
     }
 
-    public void updateButtonIconsAccordingToLevel(Context context, Level level, boolean isAuto) {
+    public void updateButtonIconsAccordingToLevel(Context context, Level level, boolean isAuto, int timeout) {
         createContentView(context);
         setButtonIconsAsDefault();
         if (level == Level.LEVEL_25) {
@@ -101,6 +109,21 @@ public class BrightnessDriverNotification{
             contentView.setImageViewResource(R.id.image_auto, R.drawable.checked);
         else
             contentView.setImageViewResource(R.id.image_auto, R.drawable.unchecked);
+
+        switch(timeout) {
+            case 30000:
+                contentView.setImageViewResource(R.id.image_timeout, R.mipmap.button_time_1);
+                break;
+            case 60000:
+                contentView.setImageViewResource(R.id.image_timeout, R.mipmap.button_time_2);
+                break;
+            case 600000:
+                contentView.setImageViewResource(R.id.image_timeout, R.mipmap.button_time_3);
+                break;
+            default:
+                contentView.setImageViewResource(R.id.image_timeout, R.mipmap.button_time_1);
+                break;
+        }
         createNotification(context);
         showNotification();
     }
