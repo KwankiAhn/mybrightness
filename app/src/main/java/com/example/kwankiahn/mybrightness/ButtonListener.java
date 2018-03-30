@@ -10,7 +10,7 @@ import android.util.Log;
  */
 
 public class ButtonListener extends BroadcastReceiver {
-    private static int[] stepValue = { (int)(255 * 0.3), (int)(255 * 0.5), 255 };
+
     BrightnessController brightnessController;
     ScreenOffController screenOffController;
     public ButtonListener() {
@@ -28,13 +28,13 @@ public class ButtonListener extends BroadcastReceiver {
         if (null != level) {
             if (level.equals("25")) {
                 Log.d(MainActivity.TAG, "LEVEL 25");
-                brightnessController.setBrightnessValue(context, stepValue[0]);
+                brightnessController.setBrightnessValue(context, brightnessController.GetStepBrightness(BrightnessController.STEP.LOW));
             } else if (level.equals("50")) {
                 Log.d(MainActivity.TAG, "LEVEL 50");
-                brightnessController.setBrightnessValue(context, stepValue[1]);
+                brightnessController.setBrightnessValue(context, brightnessController.GetStepBrightness(BrightnessController.STEP.MID));
             } else if (level.equals("100")) {
                 Log.d(MainActivity.TAG, "LEVEL 100");
-                brightnessController.setBrightnessValue(context, stepValue[2]);
+                brightnessController.setBrightnessValue(context, brightnessController.GetStepBrightness(BrightnessController.STEP.HIGH));
             } else if (level.equals("AUTO")) {
                 Log.d(MainActivity.TAG, "LEVEL AUTO");
                 brightnessController.toggleAuto(context);
@@ -50,12 +50,12 @@ public class ButtonListener extends BroadcastReceiver {
         driverNotification.updateButtonIconsAccordingToLevel(context, getBrightnessLevelbByValue(levelValue), brightnessController.isAutoMode(context), screenOffController.getOffTime(context));
     }
 
-    private BrightnessDriverNotification.Level getBrightnessLevelbByValue(int value) {
-        if (value == stepValue[0]) {
+    public BrightnessDriverNotification.Level getBrightnessLevelbByValue(int value) {
+        if (value == brightnessController.GetStepBrightness(BrightnessController.STEP.LOW)) {
             return BrightnessDriverNotification.Level.LEVEL_25;
-        } else if (value == stepValue[1]) {
+        } else if (value == brightnessController.GetStepBrightness(BrightnessController.STEP.MID)) {
             return BrightnessDriverNotification.Level.LEVEL_50;
-        } else if (value == stepValue[2]) {
+        } else if (value == brightnessController.GetStepBrightness(BrightnessController.STEP.HIGH)) {
             return BrightnessDriverNotification.Level.LEVEL_100;
         }
         return BrightnessDriverNotification.Level.LEVEL_25;

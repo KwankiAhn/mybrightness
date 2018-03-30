@@ -21,21 +21,26 @@ public class MainActivity extends AppCompatActivity {
     public static String TAG = "MYBRIGHTNESS";
     private Context context;
     private ButtonListener listener;
+    private BrightnessController brightnessController;
+    ScreenOffController screenOffController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate() Start");
         super.onCreate(savedInstanceState);
         context = this;
+        listener = new ButtonListener();
+        brightnessController = new BrightnessController();
+        screenOffController = new ScreenOffController();
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //toolbar.setLogo(R.drawable.kkahn);
         final BrightnessDriverNotification notification = new BrightnessDriverNotification(context);
         final Button startButton = (Button)findViewById(R.id.startButton);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 notification.start(context);
+                notification.updateButtonIconsAccordingToLevel(context, listener.getBrightnessLevelbByValue(brightnessController.getBrightnessValue(context)),brightnessController.isAutoMode(context), screenOffController.getOffTime(context));
             }
         });
         final Button endButton = (Button)findViewById(R.id.endButton);

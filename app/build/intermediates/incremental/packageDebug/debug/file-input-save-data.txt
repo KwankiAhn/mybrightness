@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Jan 01 21:52:11 KST 2018
+#Fri Mar 30 22:22:33 KST 2018
 2.base=C\:\\src-github\\MyBrightness\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
 5.set=DEX
 0.path=classes.dex

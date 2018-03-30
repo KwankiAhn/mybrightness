@@ -1,0 +1,170 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:2:1-25:12
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\design-26.0.0-alpha1.aar\cec8054648208ba24f4d2945b38f22d0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\446e9351f4dfcb80e657d5ca7a6be4ef\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\a351f5c91872134b0220965c81e2579f\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\5145c157e1ac76d04e21a226fe6c2e4d\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\cce5d9b1a7a15ccf3dcd10b74e7a8eef\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-alpha1.aar\72228addd04f0f586d52df0a406e8c74\AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-alpha1.aar\34ebfc37161ae33e2f673cefb02f1d87\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\c92232bb795e63388928c3eebe96d816\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\c879758cf3a9df311a4074e639151128\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\d27c9082592acf7e1ff516189be83f77\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\99b78ecb9e2bfc033b8255690bf3cf62\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\e6ba4b4913ddf3eaa4427146b2e458d7\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\a76b73a6276690040b6d223db0de168f\AndroidManifest.xml:17:1-31:12
+INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:2:1-25:12
+	package
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:3:5-49
+		INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+		INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:2:1-25:12
+		INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:2:1-25:12
+		INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:4:5-5:59
+	android:name
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:5:9-57
+application
+ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:6:5-23:19
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\design-26.0.0-alpha1.aar\cec8054648208ba24f4d2945b38f22d0\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\design-26.0.0-alpha1.aar\cec8054648208ba24f4d2945b38f22d0\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\446e9351f4dfcb80e657d5ca7a6be4ef\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\446e9351f4dfcb80e657d5ca7a6be4ef\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\a351f5c91872134b0220965c81e2579f\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\a351f5c91872134b0220965c81e2579f\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\5145c157e1ac76d04e21a226fe6c2e4d\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\5145c157e1ac76d04e21a226fe6c2e4d\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\cce5d9b1a7a15ccf3dcd10b74e7a8eef\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\cce5d9b1a7a15ccf3dcd10b74e7a8eef\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-alpha1.aar\34ebfc37161ae33e2f673cefb02f1d87\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-alpha1.aar\34ebfc37161ae33e2f673cefb02f1d87\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\c92232bb795e63388928c3eebe96d816\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\c92232bb795e63388928c3eebe96d816\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\c879758cf3a9df311a4074e639151128\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\c879758cf3a9df311a4074e639151128\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\d27c9082592acf7e1ff516189be83f77\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\d27c9082592acf7e1ff516189be83f77\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\99b78ecb9e2bfc033b8255690bf3cf62\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\99b78ecb9e2bfc033b8255690bf3cf62\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\e6ba4b4913ddf3eaa4427146b2e458d7\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\e6ba4b4913ddf3eaa4427146b2e458d7\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\a76b73a6276690040b6d223db0de168f\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\a76b73a6276690040b6d223db0de168f\AndroidManifest.xml:29:5-20
+	android:supportsRtl
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:11:9-35
+	android:label
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:9:9-41
+	android:roundIcon
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:10:9-54
+	android:icon
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:8:9-39
+	android:allowBackup
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:12:9-40
+activity#com.example.kwankiahn.mybrightness.MainActivity
+ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:13:9-21:20
+	android:label
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:15:13-45
+	android:theme
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:16:13-56
+	android:name
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:14:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:17:13-20:29
+action#android.intent.action.MAIN
+ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:19:27-74
+receiver#com.example.kwankiahn.mybrightness.ButtonListener
+ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:22:9-51
+	android:name
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml:22:19-49
+uses-sdk
+INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\design-26.0.0-alpha1.aar\cec8054648208ba24f4d2945b38f22d0\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\design-26.0.0-alpha1.aar\cec8054648208ba24f4d2945b38f22d0\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\446e9351f4dfcb80e657d5ca7a6be4ef\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\446e9351f4dfcb80e657d5ca7a6be4ef\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\a351f5c91872134b0220965c81e2579f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\a351f5c91872134b0220965c81e2579f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\5145c157e1ac76d04e21a226fe6c2e4d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\5145c157e1ac76d04e21a226fe6c2e4d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\cce5d9b1a7a15ccf3dcd10b74e7a8eef\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\cce5d9b1a7a15ccf3dcd10b74e7a8eef\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-alpha1.aar\72228addd04f0f586d52df0a406e8c74\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-alpha1.aar\72228addd04f0f586d52df0a406e8c74\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-alpha1.aar\34ebfc37161ae33e2f673cefb02f1d87\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-alpha1.aar\34ebfc37161ae33e2f673cefb02f1d87\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\c92232bb795e63388928c3eebe96d816\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\c92232bb795e63388928c3eebe96d816\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\c879758cf3a9df311a4074e639151128\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\c879758cf3a9df311a4074e639151128\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\d27c9082592acf7e1ff516189be83f77\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\d27c9082592acf7e1ff516189be83f77\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\99b78ecb9e2bfc033b8255690bf3cf62\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\99b78ecb9e2bfc033b8255690bf3cf62\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\e6ba4b4913ddf3eaa4427146b2e458d7\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\e6ba4b4913ddf3eaa4427146b2e458d7\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\a76b73a6276690040b6d223db0de168f\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\a76b73a6276690040b6d223db0de168f\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\design-26.0.0-alpha1.aar\cec8054648208ba24f4d2945b38f22d0\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+		INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+		ADDED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+		INJECTED from C:\src-github\MyBrightness\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\design-26.0.0-alpha1.aar\cec8054648208ba24f4d2945b38f22d0\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\446e9351f4dfcb80e657d5ca7a6be4ef\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\446e9351f4dfcb80e657d5ca7a6be4ef\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\5145c157e1ac76d04e21a226fe6c2e4d\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\5145c157e1ac76d04e21a226fe6c2e4d\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\cce5d9b1a7a15ccf3dcd10b74e7a8eef\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\cce5d9b1a7a15ccf3dcd10b74e7a8eef\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-alpha1.aar\72228addd04f0f586d52df0a406e8c74\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-alpha1.aar\72228addd04f0f586d52df0a406e8c74\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-alpha1.aar\34ebfc37161ae33e2f673cefb02f1d87\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-alpha1.aar\34ebfc37161ae33e2f673cefb02f1d87\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\c92232bb795e63388928c3eebe96d816\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\c92232bb795e63388928c3eebe96d816\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\c879758cf3a9df311a4074e639151128\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\c879758cf3a9df311a4074e639151128\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\d27c9082592acf7e1ff516189be83f77\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\d27c9082592acf7e1ff516189be83f77\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\99b78ecb9e2bfc033b8255690bf3cf62\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\99b78ecb9e2bfc033b8255690bf3cf62\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\e6ba4b4913ddf3eaa4427146b2e458d7\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\e6ba4b4913ddf3eaa4427146b2e458d7\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\a76b73a6276690040b6d223db0de168f\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\a76b73a6276690040b6d223db0de168f\AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\design-26.0.0-alpha1.aar\cec8054648208ba24f4d2945b38f22d0\AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\pray4\.gradle\caches\transforms-1\files-1.1\design-26.0.0-alpha1.aar\cec8054648208ba24f4d2945b38f22d0\AndroidManifest.xml:26:9-47

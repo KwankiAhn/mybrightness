@@ -8,6 +8,15 @@ import android.provider.Settings;
  */
 
 public class BrightnessController {
+    public enum STEP {
+        LOW,
+        MID,
+        HIGH
+    }
+    private int[] stepValue = { (int)(255 * 0.3), (int)(255 * 0.5), 255 };
+    public int GetStepBrightness(STEP step) {
+        return stepValue[step.ordinal()];
+    }
     public void setBrightnessValue(Context context, double v) {
         android.provider.Settings.System.putInt(context.getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, (int)v);
     }
